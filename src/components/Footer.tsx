@@ -28,7 +28,9 @@ export function Footer() {
               LinkedIn
             </a>
             <a
-              href="#"
+              href="https://github.com/harshil543"
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-mono text-xs text-ash hover:text-pure-white transition-colors"
             >
               <span className="text-ash-dark mr-2">[GH]</span>
@@ -40,6 +42,13 @@ export function Footer() {
             >
               <span className="text-ash-dark mr-2">[EM]</span>
               Email
+            </a>
+            <a
+              href="tel:+916359437354"
+              className="font-mono text-xs text-ash hover:text-pure-white transition-colors"
+            >
+              <span className="text-ash-dark mr-2">[PH]</span>
+              6359437354
             </a>
           </div>
         </div>
