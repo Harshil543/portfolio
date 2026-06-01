@@ -19,7 +19,7 @@ const EXPERIENCES: ExperienceBlock[] = [
     role: 'FULL STACK DEVELOPER',
     company: 'GTCSYS',
     period: 'May 2024 — Present',
-    duration: '1+ Year',
+    duration: '2+ Year',
     description:
       'Contributing to development of production-grade web apps across real estate, healthcare, SaaS, and fintech domains. Building scalable backend services, responsive frontends, and cloud infrastructure.',
     achievements: [
