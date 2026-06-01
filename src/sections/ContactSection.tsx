@@ -90,10 +90,10 @@ export function ContactSection() {
                 href="mailto:sondagarharshil0@gmail.com"
                 className="font-display font-bold text-pure-white underline underline-offset-8 transition-all hover:decoration-highlight"
                 style={{
-                  fontSize: 'clamp(28px, 5vw, 56px)',
+                  fontSize: 'clamp(14px, 5vw, 56px)',
                   textDecorationColor: 'rgba(212,175,55,0.5)',
                   lineHeight: 1.2,
-                  wordBreak: 'break-all',
+                  whiteSpace: 'nowrap',
                 }}
               >
                 <StaggeredTextReveal mode="word" triggerOnLoad delay={0.2} staggerDelay={0.06}>
