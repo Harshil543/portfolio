@@ -59,7 +59,7 @@ export function AboutSection() {
           <div className="lg:col-span-5 relative">
             <div className="relative">
               <img
-                src="/images/about-portrait.jpg"
+                src="/images/about-port.png"
                 alt="Harshil Sondagar"
                 className="w-full object-cover"
                 style={{
