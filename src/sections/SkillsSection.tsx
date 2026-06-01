@@ -38,7 +38,7 @@ const SKILL_CATEGORIES = [
       </svg>
     ),
     count: '4 technologies',
-    tags: ['PostgreSQL', 'MongoDB', 'MySQL', 'GraphQL'],
+    tags: ['PostgreSQL', 'MongoDB'],
   },
   {
     name: 'Cloud & DevOps',
