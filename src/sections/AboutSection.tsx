@@ -48,10 +48,24 @@ export function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative w-full section-padding"
-      style={{ backgroundColor: '#F5F5F0', zIndex: 2 }}
+      className="relative w-full section-padding overflow-hidden"
+      style={{ backgroundColor: '#0A0A0A', zIndex: 2 }}
     >
-      <div className="section-container">
+      {/* Ambient background video */}
+      <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 0 }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover"
+          style={{ opacity: 0.35 }}
+        >
+          <source src="/videos/about-ambient.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="section-container relative" style={{ zIndex: 1 }}>
         <SectionNumber number="01" />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -116,7 +130,7 @@ export function AboutSection() {
 
             {/* Heading */}
             <h2
-              className="font-display font-medium text-pure-black uppercase"
+              className="font-display font-medium text-pure-white uppercase"
               style={{
                 fontSize: 'clamp(28px, 4vw, 42px)',
                 lineHeight: 1.0,
@@ -134,10 +148,10 @@ export function AboutSection() {
               className="mt-8 transition-all duration-1000"
               style={{ opacity: 0, transform: 'translateY(30px)' }}
             >
-              <p className="font-display text-pure-black leading-relaxed" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)' }}>
+              <p className="font-display text-pure-white leading-relaxed" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)' }}>
                 I'm Harshil Sondagar, a Full Stack Developer with a passion for crafting production-grade web applications. With expertise spanning React, Node.js, and cloud architecture, I bring ideas to life through clean code and thoughtful design.
               </p>
-              <p className="font-display text-pure-black leading-relaxed mt-4" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)' }}>
+              <p className="font-display text-pure-white leading-relaxed mt-4" style={{ fontSize: 'clamp(16px, 1.2vw, 18px)' }}>
                 Currently at GTCSYS, I develop scalable solutions across real estate, healthcare, SaaS, and fintech domains. Every project is an opportunity to push boundaries and deliver excellence.
               </p>
             </div>
@@ -159,7 +173,7 @@ export function AboutSection() {
                     </div>
                   </div>
                   {i < STATS.length - 1 && (
-                    <div className="w-px h-10 bg-light-border hidden sm:block" />
+                    <div className="w-px h-10 bg-lead hidden sm:block" />
                   )}
                 </div>
               ))}
