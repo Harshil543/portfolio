@@ -62,7 +62,7 @@ export function Footer() {
             Ahmedabad, Gujarat, India
           </p>
           <p className="font-display text-[13px] text-ash">
-            &copy; 2024 Harshil Sondagar
+            &copy; {new Date().getFullYear()} Harshil Sondagar
           </p>
         </div>
 
