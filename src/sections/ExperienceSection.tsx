@@ -141,7 +141,7 @@ function ExperienceBlockComponent({ exp }: { exp: ExperienceBlock }) {
         {exp.description}
       </p>
 
-      <ul className="mt-5 space-y-3">
+      <ul className="mt-4 lg:mt-5 space-y-2 lg:space-y-3">
         {exp.achievements.map((ach, i) => (
           <li
             key={i}
@@ -237,7 +237,7 @@ export function ExperienceSection() {
           Professional journey & contributions.
         </p>
 
-        <div className="mt-16 space-y-20">
+        <div className="mt-12 lg:mt-16 space-y-12 lg:space-y-20">
           {EXPERIENCES.map((exp, i) => (
             <ExperienceBlockComponent key={i} exp={exp} />
           ))}

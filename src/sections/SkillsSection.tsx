@@ -108,7 +108,7 @@ export function SkillsSection() {
       <div className="section-container">
         <SectionNumber number="02" />
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 lg:mb-12">
           <h2
             className="font-display font-medium text-pure-white uppercase"
             style={{

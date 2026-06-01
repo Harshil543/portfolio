@@ -281,7 +281,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <div className="space-y-24 lg:space-y-32">
+        <div className="space-y-16 lg:space-y-32">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={i} project={project} />
           ))}

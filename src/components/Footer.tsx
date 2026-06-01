@@ -4,7 +4,7 @@ export function Footer() {
   const { scrollTo } = useLocomotive();
 
   return (
-    <footer className="w-full bg-ink border-t border-lead" style={{ padding: '80px 0 40px' }}>
+    <footer className="w-full bg-ink border-t border-lead py-12 lg:py-20">
       <div className="section-container">
         {/* Top row */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
