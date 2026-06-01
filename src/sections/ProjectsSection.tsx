@@ -19,7 +19,7 @@ const PROJECTS: Project[] = [
     name: 'BirdEarly',
     category: 'Real Estate Platform',
     description:
-      'Developed property listing, search, filtering, and map-based exploration using Next.js, NestJS, PostgreSQL, and AWS. Built scalable backend APIs for property management and user workflows.',
+      'A web platform for property discovery, mapping, and real-estate insights using Next.js, NestJS, PostgreSQL, and AWS. Built scalable backend APIs for property management and user workflows.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
     image: '/images/proj-birdearly.jpg',
     reversed: false,
@@ -29,19 +29,19 @@ const PROJECTS: Project[] = [
     name: 'Clarity',
     category: 'Property Bidding Platform',
     description:
-      'Developed bidding workflows, dashboards, and property management using Next.js, NestJS, and PostgreSQL. Implemented business logic, notifications, and backend APIs for user engagement.',
+      'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered valuation using Next.js, NestJS, and PostgreSQL. Implemented business logic, notifications, and backend APIs for user engagement.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-    image: '/images/proj-clarity.jpg',
+    image: '/images/proj-clarity.png',
     reversed: true,
   },
   {
     number: '03',
-    name: 'SubIdea',
+    name: 'ScaleRE',
     category: 'Multi-Tenant SaaS Platform',
     description:
       'Developed user management, role-based access control, and business workflow features. Built scalable backend APIs and integrated PostgreSQL database operations.',
-    tags: ['NestJS', 'PostgreSQL', 'RBAC', 'Workflow'],
-    image: '/images/proj-subidea.jpg',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
+    image: '/images/proj-scalere.png',
     reversed: false,
   },
   {
@@ -51,77 +51,81 @@ const PROJECTS: Project[] = [
     description:
       'Developed Android and iOS features using React Native and REST API integrations. Implemented user workflows, dashboard functionality, and mobile enhancements.',
     tags: ['React Native', 'REST API', 'Mobile', 'FinTech'],
-    image: '/images/proj-bullit.jpg',
+    image: '/images/proj-bullit.png',
     reversed: true,
+  },
+  {
+    number: '05',
+    name: 'Bullit',
+    category: 'FinTech Web Application',
+    description:
+      'Developed web platform features using Next.js and REST API integrations. Implemented user workflows, dashboard functionality, and web enhancements.',
+    tags: ['Next.js', 'Tailwind CSS'],
+    image: '/images/proj-bullit-web.png',
+    reversed: false,
   },
 ];
 
-function SpotlightImage({ src, alt }: { src: string; alt: string }) {
+function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const maskRef = useRef<HTMLDivElement>(null);
+  const imageRef = useRef<HTMLImageElement>(null);
   const isTouch = useIsTouchDevice();
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (isTouch || !containerRef.current || !maskRef.current) return;
+      if (isTouch || !containerRef.current || !imageRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      maskRef.current.style.maskImage = `radial-gradient(circle 150px at ${x}px ${y}px, transparent 0%, black 100%)`;
-      maskRef.current.style.webkitMaskImage = `radial-gradient(circle 150px at ${x}px ${y}px, transparent 0%, black 100%)`;
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      const rotateX = y * -12;
+      const rotateY = x * 12;
+
+      containerRef.current.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+      imageRef.current.style.filter = `brightness(1.1) grayscale(0%)`;
+      imageRef.current.style.transform = `scale(1.05)`;
     },
     [isTouch]
   );
 
   const handleMouseLeave = useCallback(() => {
-    if (!maskRef.current) return;
-    maskRef.current.style.maskImage = 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)';
-    maskRef.current.style.webkitMaskImage = 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)';
+    if (!containerRef.current || !imageRef.current) return;
+    containerRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+    imageRef.current.style.filter = 'brightness(0.6) grayscale(80%)';
+    imageRef.current.style.transform = 'scale(1)';
   }, []);
-
-  const handleTouchStart = useCallback(
-    (e: React.TouchEvent<HTMLDivElement>) => {
-      if (!isTouch || !containerRef.current || !maskRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const touch = e.touches[0];
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
-      maskRef.current.style.maskImage = `radial-gradient(circle 150px at ${x}px ${y}px, transparent 0%, black 100%)`;
-      maskRef.current.style.webkitMaskImage = `radial-gradient(circle 150px at ${x}px ${y}px, transparent 0%, black 100%)`;
-      setTimeout(() => {
-        if (maskRef.current) {
-          maskRef.current.style.transition = 'mask-image 1s ease, -webkit-mask-image 1s ease';
-          maskRef.current.style.maskImage = 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)';
-          maskRef.current.style.webkitMaskImage = 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)';
-        }
-      }, 500);
-    },
-    [isTouch]
-  );
 
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden cursor-crosshair"
+      className="relative overflow-hidden cursor-pointer bg-lead"
+      style={{
+        transition: 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)',
+        transformStyle: 'preserve-3d'
+      }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onTouchStart={handleTouchStart}
     >
-      {/* Full color layer (bottom) */}
-      <img src={src} alt={alt} className="w-full object-cover" style={{ aspectRatio: '3/2' }} loading="lazy" />
+      {/* Blueprint Corner Accents */}
+      <div className="absolute inset-6 pointer-events-none transition-opacity duration-500" style={{ zIndex: 10, opacity: 0.6 }}>
+        <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-highlight" />
+        <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-highlight" />
+        <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-highlight" />
+        <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-highlight" />
+      </div>
 
-      {/* Grayscale layer (top) with spotlight mask */}
-      <div
-        ref={maskRef}
-        className="absolute inset-0"
+      <img
+        ref={imageRef}
+        src={src}
+        alt={alt}
+        className="w-full object-cover"
         style={{
-          backgroundImage: `url(${src})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          filter: 'grayscale(100%) brightness(60%)',
-          maskImage: 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)',
-          WebkitMaskImage: 'radial-gradient(circle 0px at 50% 50%, transparent 0%, black 100%)',
+          aspectRatio: '3/2',
+          transition: 'filter 0.5s ease, transform 0.5s ease',
+          filter: 'brightness(0.6) grayscale(80%)',
+          willChange: 'transform, filter'
         }}
+        loading="lazy"
       />
     </div>
   );
@@ -220,13 +224,13 @@ function ProjectCard({ project }: { project: Project }) {
         <>
           <div className="lg:col-span-5 order-2 lg:order-1">{textContent}</div>
           <div className="lg:col-span-7 order-1 lg:order-2">
-            <SpotlightImage src={project.image} alt={project.name} />
+            <PremiumProjectImage src={project.image} alt={project.name} />
           </div>
         </>
       ) : (
         <>
           <div className="lg:col-span-7">
-            <SpotlightImage src={project.image} alt={project.name} />
+            <PremiumProjectImage src={project.image} alt={project.name} />
           </div>
           <div className="lg:col-span-5">{textContent}</div>
         </>
