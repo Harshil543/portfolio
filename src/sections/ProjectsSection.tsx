@@ -1,7 +1,7 @@
 import { useEffect, useRef, useCallback } from 'react';
 import { SectionNumber } from '@/components/SectionNumber';
 import { StaggeredTextReveal } from '@/components/StaggeredTextReveal';
-import { useIsTouchDevice } from '@/hooks/useMediaQuery';
+import { useIsMobile } from '@/hooks/useMediaQuery';
 
 interface Project {
   number: string;
@@ -69,11 +69,11 @@ const PROJECTS: Project[] = [
 function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
-  const isTouch = useIsTouchDevice();
+  const isMobile = useIsMobile();
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
-      if (isTouch || !containerRef.current || !imageRef.current) return;
+      if (isMobile || !containerRef.current || !imageRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
@@ -85,15 +85,15 @@ function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
       imageRef.current.style.filter = `brightness(1.1) grayscale(0%)`;
       imageRef.current.style.transform = `scale(1.05)`;
     },
-    [isTouch]
+    [isMobile]
   );
 
   const handleMouseLeave = useCallback(() => {
     if (!containerRef.current || !imageRef.current) return;
     containerRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    imageRef.current.style.filter = 'brightness(0.6) grayscale(80%)';
+    imageRef.current.style.filter = isMobile ? 'brightness(1) grayscale(0%)' : 'brightness(0.6) grayscale(80%)';
     imageRef.current.style.transform = 'scale(1)';
-  }, []);
+  }, [isMobile]);
 
   return (
     <div
@@ -122,7 +122,7 @@ function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
         style={{
           aspectRatio: '3/2',
           transition: 'filter 0.5s ease, transform 0.5s ease',
-          filter: 'brightness(0.6) grayscale(80%)',
+          filter: isMobile ? 'brightness(1) grayscale(0%)' : 'brightness(0.6) grayscale(80%)',
           willChange: 'transform, filter'
         }}
         loading="lazy"
@@ -203,14 +203,6 @@ function ProjectCard({ project }: { project: Project }) {
           </span>
         ))}
       </div>
-
-      <span
-        className="font-display font-medium text-ash mt-5 inline-flex items-center gap-2 cursor-default"
-        style={{ fontSize: '14px' }}
-      >
-        View Project
-        <span>→</span>
-      </span>
     </div>
   );
 
