@@ -84,9 +84,23 @@ export function HeroSection() {
             letterSpacing: '-0.04em',
           }}
         >
-          <StaggeredTextReveal mode="character" triggerOnLoad delay={0.3} staggerDelay={0.02}>
-            HARSHIL SONDAGAR
-          </StaggeredTextReveal>
+          <span className="block md:hidden">
+            <span className="block">
+              <StaggeredTextReveal mode="character" triggerOnLoad delay={0.3} staggerDelay={0.02}>
+                HARSHIL
+              </StaggeredTextReveal>
+            </span>
+            <span className="block">
+              <StaggeredTextReveal mode="character" triggerOnLoad delay={0.3} staggerDelay={0.02}>
+                SONDAGAR
+              </StaggeredTextReveal>
+            </span>
+          </span>
+          <span className="hidden md:block">
+            <StaggeredTextReveal mode="character" triggerOnLoad delay={0.3} staggerDelay={0.02}>
+              HARSHIL SONDAGAR
+            </StaggeredTextReveal>
+          </span>
         </h1>
 
         {/* Role subtitle */}
