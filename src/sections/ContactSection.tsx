@@ -65,20 +65,23 @@ export function ContactSection() {
                   LinkedIn
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/harshil543"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-mono text-pure-white hover:underline hover:decoration-highlight transition-all"
                   style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}
                 >
                   <span className="text-ash mr-2">[GH]</span>
                   GitHub
                 </a>
-                <span
-                  className="font-mono text-pure-white"
+                <a
+                  href="tel:+916359437354"
+                  className="font-mono text-pure-white hover:underline hover:decoration-highlight transition-all"
                   style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}
                 >
                   <span className="text-ash mr-2">[PH]</span>
                   6359437354
-                </span>
+                </a>
               </div>
             }
           >
