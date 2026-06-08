@@ -83,7 +83,7 @@ export function EducationSection() {
               }}
             >
               <StaggeredTextReveal mode="line" threshold={0.1}>
-                Bachelor of Technology (B.Tech) in Computer Engineering
+                Bachelor of Technology (B.Tech) in Information Technology
               </StaggeredTextReveal>
             </h3>
 
