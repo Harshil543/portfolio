@@ -57,12 +57,12 @@ const PROJECTS: Project[] = [
   },
   {
     number: "05",
-    name: "Financial Services Platform",
+    name: "Bullit - Financial Services Platform",
     category: "FinTech Web & Mobile Ecosystem",
     description:
       "Developed a cross-platform fintech solution consisting of web and mobile applications. Built user onboarding workflows, financial dashboards, REST API integrations, account management features, and responsive user experiences across Android, iOS, and web platforms.",
     tags: ["React Native", "Next.js", "REST API", "FinTech"],
-    image: "/images/proj-5.jpeg",
+    image: "/images/proj-5.png",
     reversed: false
   },
   {
@@ -74,6 +74,46 @@ const PROJECTS: Project[] = [
     tags: ["Next.js", "Node.js", "PostgreSQL", "Lead Generation"],
     image: "/images/proj-6.jpeg",
     reversed: true
+  },
+  {
+    number: "07",
+    name: "Wearable Device Data Platform",
+    category: "IoT & HealthTech Platform",
+    description:
+      "Engineered backend services for a wearable technology platform, enabling secure device integration, real-time biometric data processing, user management, and scalable APIs supporting connected mobile experiences.",
+    tags: ["Node.js", "PostgreSQL", "IoT", "HealthTech"],
+    image: "/images/proj-7.jpeg",
+    reversed: false
+  },
+  {
+    number: '08',
+    name: 'Dance Performance Analytics',
+    category: 'DanceTech Mobile Application',
+    description:
+      'Built a cross-platform mobile application for dance performance analytics. Implemented user insights, subscription-based premium features, Stripe payment integration, access control, and scalable backend connectivity.',
+    tags: [
+      'React Native',
+      'Stripe',
+      'REST API',
+      'SportsTech'
+    ],
+    image: '/images/proj-8.jpeg',
+    reversed: true,
+  },
+  {
+    number: '09',
+    name: 'Vishwa Furniture – Bespoke Interior & Furniture',
+    category: 'Bespoke Interior & Furniture Showcase Website',
+    description:
+      'Developed a premium web platform for showcasing bespoke furniture collections and interior design services. Built engaging product experiences, project galleries, inquiry workflows, and responsive interfaces focused on craftsmanship, design aesthetics, and customer engagement.',
+    tags: [
+      'Next.js',
+      'React',
+      'Responsive Design',
+      'UI/UX'
+    ],
+    image: '/images/proj-9.jpeg',
+    reversed: false,
   }
 ];
 
