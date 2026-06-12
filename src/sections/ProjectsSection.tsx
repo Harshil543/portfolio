@@ -45,7 +45,7 @@ const PROJECTS: Project[] = [
   //   reversed: false,
   // },
   {
-    number: '04',
+    number: '01',
     name: 'Bullit',
     category: 'FinTech Mobile Application',
     description:
@@ -55,7 +55,7 @@ const PROJECTS: Project[] = [
     reversed: true,
   },
   {
-    number: '05',
+    number: '02',
     name: 'Bullit',
     category: 'FinTech Web Application',
     description:
