@@ -1,8 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { SectionNumber } from '@/components/SectionNumber';
 import { StaggeredTextReveal } from '@/components/StaggeredTextReveal';
-import { StateRevealHover } from '@/components/StateRevealHover';
-
 export function ContactSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const infoRef = useRef<HTMLDivElement>(null);
@@ -47,61 +45,22 @@ export function ContactSection() {
           LET'S BUILD SOMETHING
         </p>
 
-        {/* Main CTA with state reveal */}
-        <div className="mt-8 w-full max-w-4xl">
-          <StateRevealHover
-            className="cursor-pointer"
-            panelClassName="flex items-center justify-center"
-            revealContent={
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 p-8">
-                <a
-                  href="https://linkedin.com/in/harshil-sondagar"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-pure-white hover:underline hover:decoration-highlight transition-all"
-                  style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}
-                >
-                  <span className="text-ash mr-2">[LI]</span>
-                  LinkedIn
-                </a>
-                <a
-                  href="https://github.com/harshil543"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-mono text-pure-white hover:underline hover:decoration-highlight transition-all"
-                  style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}
-                >
-                  <span className="text-ash mr-2">[GH]</span>
-                  GitHub
-                </a>
-                <a
-                  href="tel:+916359437354"
-                  className="font-mono text-pure-white hover:underline hover:decoration-highlight transition-all"
-                  style={{ fontSize: 'clamp(14px, 1.5vw, 18px)' }}
-                >
-                  <span className="text-ash mr-2">[PH]</span>
-                  6359437354
-                </a>
-              </div>
-            }
+        {/* Main CTA — click opens email */}
+        <div className="mt-8 w-full max-w-4xl py-8 px-4">
+          <a
+            href="mailto:sondagarharshil0@gmail.com"
+            className="font-display font-bold text-pure-white underline underline-offset-8 transition-all hover:decoration-highlight cursor-pointer"
+            style={{
+              fontSize: 'clamp(14px, 5vw, 56px)',
+              textDecorationColor: 'rgba(212,175,55,0.5)',
+              lineHeight: 1.2,
+              whiteSpace: 'nowrap',
+            }}
           >
-            <div className="py-8 px-4">
-              <a
-                href="mailto:sondagarharshil0@gmail.com"
-                className="font-display font-bold text-pure-white underline underline-offset-8 transition-all hover:decoration-highlight"
-                style={{
-                  fontSize: 'clamp(14px, 5vw, 56px)',
-                  textDecorationColor: 'rgba(212,175,55,0.5)',
-                  lineHeight: 1.2,
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                <StaggeredTextReveal mode="word" triggerOnLoad delay={0.2} staggerDelay={0.06}>
-                  sondagarharshil0@gmail.com
-                </StaggeredTextReveal>
-              </a>
-            </div>
-          </StateRevealHover>
+            <StaggeredTextReveal mode="word" triggerOnLoad delay={0.2} staggerDelay={0.06}>
+              sondagarharshil0@gmail.com
+            </StaggeredTextReveal>
+          </a>
         </div>
 
         {/* Location note */}

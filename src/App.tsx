@@ -10,6 +10,7 @@ import { ProjectsSection } from '@/sections/ProjectsSection';
 import { EducationSection } from '@/sections/EducationSection';
 import { ContactSection } from '@/sections/ContactSection';
 import { Footer } from '@/components/Footer';
+import { WhatsAppFloatingButton } from '@/components/WhatsAppFloatingButton';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <ContactSection />
       </main>
       <Footer />
+      <WhatsAppFloatingButton />
     </SmoothScrollProvider>
   );
 }
