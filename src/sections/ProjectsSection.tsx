@@ -21,7 +21,7 @@ const PROJECTS: Project[] = [
     description:
       'A web platform for property discovery, interactive mapping, and real-estate insights. Built scalable backend APIs, property management workflows, and user-centric search experiences.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-birdearly.jpg',
+    image: '/images/proj-1.jpg',
     reversed: false,
   },
   {
@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
     description:
       'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered property valuation. Developed business logic, notifications, and scalable backend services.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-    image: '/images/proj-clarity.png',
+    image: '/images/proj-2.png',
     reversed: true,
   },
   {
@@ -41,49 +41,34 @@ const PROJECTS: Project[] = [
     description:
       'Built a multi-tenant SaaS platform with role-based access control, user management, and business workflow automation. Developed scalable APIs and database architecture for enterprise users.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-scalere.png',
+    image: '/images/proj-3.png',
     reversed: false,
   },
   {
     number: '04',
-    name: 'Automotive Marketplace SaaS',
-    category: 'Multi-Tenant Vehicle Platform',
-    description:
-      'Developed a multi-tenant automotive marketplace where dealerships manage inventory through dedicated subdomains while publishing listings to a centralized marketplace. Implemented RBAC, vehicle management, dealer portals, and lead generation workflows.',
-    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Multi-Tenant'],
-    image: '/images/proj-aurixauto.png',
-    reversed: true,
-  },
-  {
-    number: '01',
     name: 'AURIX AUTO',
     category: 'Multi-Tenant Automotive Marketplace & Dealer Management Platform',
     description:
       'Built a SaaS-based automotive marketplace where dealerships receive dedicated subdomain portals to manage inventory, staff, and operations. Developed a centralized marketplace aggregating vehicle listings from multiple dealers, featuring role-based access control, vehicle management, dealer profiles, and lead generation workflows.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Multi-Tenant SaaS'],
-    image: '/images/proj-aurix.png',
+    image: '/images/proj-4.png',
     reversed: false,
   },
   {
-    number: '02',
-    name: 'Bullit',
-    category: 'FinTech Mobile Application',
+    number: '05',
+    name: 'Financial Services Platform',
+    category: 'FinTech Web & Mobile Ecosystem',
     description:
-      'Developed Android and iOS features using React Native and REST API integrations. Implemented user workflows, dashboard functionality, and mobile enhancements.',
-    tags: ['React Native', 'REST API', 'Mobile', 'FinTech'],
-    image: '/images/proj-bullit.png',
+      'Developed a cross-platform fintech solution consisting of web and mobile applications. Built user onboarding workflows, financial dashboards, REST API integrations, account management features, and responsive user experiences across Android, iOS, and web platforms.',
+    tags: [
+      'React Native',
+      'Next.js',
+      'REST API',
+      'FinTech'
+    ],
+    image: '/images/proj-5.png',
     reversed: true,
-  },
-  {
-    number: '02',
-    name: 'Bullit',
-    category: 'FinTech Web Application',
-    description:
-      'Developed web platform features using Next.js and REST API integrations. Implemented user workflows, dashboard functionality, and web enhancements.',
-    tags: ['Next.js', 'Tailwind CSS'],
-    image: '/images/proj-bullit-web.png',
-    reversed: false,
-  },
+  }
 ];
 
 function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
