@@ -21,7 +21,7 @@ const PROJECTS: Project[] = [
     description:
       'A web platform for property discovery, interactive mapping, and real-estate insights. Built scalable backend APIs, property management workflows, and user-centric search experiences.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-1.jpg',
+    image: '/images/proj-1.png',
     reversed: false,
   },
   {
@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
     description:
       'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered property valuation. Developed business logic, notifications, and scalable backend services.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-    image: '/images/proj-2.png',
+    image: '/images/proj-2.jpeg',
     reversed: true,
   },
   {
@@ -51,8 +51,8 @@ const PROJECTS: Project[] = [
     description:
       'Built a SaaS-based automotive marketplace where dealerships receive dedicated subdomain portals to manage inventory, staff, and operations. Developed a centralized marketplace aggregating vehicle listings from multiple dealers, featuring role-based access control, vehicle management, dealer profiles, and lead generation workflows.',
     tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Multi-Tenant SaaS'],
-    image: '/images/proj-4.png',
-    reversed: false,
+    image: '/images/proj-4.jpeg',
+    reversed: true,
   },
   {
     number: '05',
@@ -66,8 +66,8 @@ const PROJECTS: Project[] = [
       'REST API',
       'FinTech'
     ],
-    image: '/images/proj-5.png',
-    reversed: true,
+    image: '/images/proj-5.jpeg',
+    reversed: false,
   }
 ];
 
