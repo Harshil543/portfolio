@@ -1,7 +1,7 @@
-import { useEffect, useRef, useCallback } from 'react';
-import { SectionNumber } from '@/components/SectionNumber';
-import { StaggeredTextReveal } from '@/components/StaggeredTextReveal';
-import { useIsMobile } from '@/hooks/useMediaQuery';
+import { useEffect, useRef, useCallback } from "react";
+import { SectionNumber } from "@/components/SectionNumber";
+import { StaggeredTextReveal } from "@/components/StaggeredTextReveal";
+import { useIsMobile } from "@/hooks/useMediaQuery";
 
 interface Project {
   number: string;
@@ -15,59 +15,65 @@ interface Project {
 
 const PROJECTS: Project[] = [
   {
-    number: '01',
-    name: 'Real Estate Discovery Platform',
-    category: 'Property Marketplace',
+    number: "01",
+    name: "Real Estate Discovery Platform",
+    category: "Property Marketplace",
     description:
-      'A web platform for property discovery, interactive mapping, and real-estate insights. Built scalable backend APIs, property management workflows, and user-centric search experiences.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-1.png',
-    reversed: false,
+      "A web platform for property discovery, interactive mapping, and real-estate insights. Built scalable backend APIs, property management workflows, and user-centric search experiences.",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "AWS"],
+    image: "/images/proj-1.png",
+    reversed: false
   },
   {
-    number: '02',
-    name: 'Property Auction & Valuation Platform',
-    category: 'PropTech Solution',
+    number: "02",
+    name: "Property Auction & Valuation Platform",
+    category: "PropTech Solution",
     description:
-      'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered property valuation. Developed business logic, notifications, and scalable backend services.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-    image: '/images/proj-2.jpeg',
-    reversed: true,
+      "A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered property valuation. Developed business logic, notifications, and scalable backend services.",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "Notifications"],
+    image: "/images/proj-2.jpeg",
+    reversed: true
   },
   {
-    number: '03',
-    name: 'Commercial Real Estate SaaS',
-    category: 'Multi-Tenant Platform',
+    number: "03",
+    name: "Commercial Real Estate SaaS",
+    category: "Multi-Tenant Platform",
     description:
-      'Built a multi-tenant SaaS platform with role-based access control, user management, and business workflow automation. Developed scalable APIs and database architecture for enterprise users.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-3.png',
-    reversed: false,
+      "Built a multi-tenant SaaS platform with role-based access control, user management, and business workflow automation. Developed scalable APIs and database architecture for enterprise users.",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "AWS"],
+    image: "/images/proj-3.png",
+    reversed: false
   },
   {
-    number: '04',
-    name: 'AURIX AUTO',
-    category: 'Multi-Tenant Automotive Marketplace & Dealer Management Platform',
+    number: "04",
+    name: "AURIX AUTO",
+    category:
+      "Multi-Tenant Automotive Marketplace & Dealer Management Platform",
     description:
-      'Built a SaaS-based automotive marketplace where dealerships receive dedicated subdomain portals to manage inventory, staff, and operations. Developed a centralized marketplace aggregating vehicle listings from multiple dealers, featuring role-based access control, vehicle management, dealer profiles, and lead generation workflows.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Multi-Tenant SaaS'],
-    image: '/images/proj-4.jpeg',
-    reversed: true,
+      "Built a SaaS-based automotive marketplace where dealerships receive dedicated subdomain portals to manage inventory, staff, and operations. Developed a centralized marketplace aggregating vehicle listings from multiple dealers, featuring role-based access control, vehicle management, dealer profiles, and lead generation workflows.",
+    tags: ["Next.js", "NestJS", "PostgreSQL", "Multi-Tenant SaaS"],
+    image: "/images/proj-4.jpeg",
+    reversed: true
   },
   {
-    number: '05',
-    name: 'Financial Services Platform',
-    category: 'FinTech Web & Mobile Ecosystem',
+    number: "05",
+    name: "Financial Services Platform",
+    category: "FinTech Web & Mobile Ecosystem",
     description:
-      'Developed a cross-platform fintech solution consisting of web and mobile applications. Built user onboarding workflows, financial dashboards, REST API integrations, account management features, and responsive user experiences across Android, iOS, and web platforms.',
-    tags: [
-      'React Native',
-      'Next.js',
-      'REST API',
-      'FinTech'
-    ],
-    image: '/images/proj-5.jpeg',
-    reversed: false,
+      "Developed a cross-platform fintech solution consisting of web and mobile applications. Built user onboarding workflows, financial dashboards, REST API integrations, account management features, and responsive user experiences across Android, iOS, and web platforms.",
+    tags: ["React Native", "Next.js", "REST API", "FinTech"],
+    image: "/images/proj-5.jpeg",
+    reversed: false
+  },
+  {
+    number: "06",
+    name: "Huntlocally",
+    category: "Business Listings & Lead Generation Platform",
+    description:
+      "Developed a business discovery platform enabling companies to create detailed profiles, generate customer leads, and manage online visibility. Implemented advanced search, business listings, reviews, ratings, authentication, and responsive user experiences.",
+    tags: ["Next.js", "Node.js", "PostgreSQL", "Lead Generation"],
+    image: "/images/proj-6.jpeg",
+    reversed: true
   }
 ];
 
@@ -95,9 +101,12 @@ function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
 
   const handleMouseLeave = useCallback(() => {
     if (!containerRef.current || !imageRef.current) return;
-    containerRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    imageRef.current.style.filter = isMobile ? 'brightness(1) grayscale(0%)' : 'brightness(0.6) grayscale(80%)';
-    imageRef.current.style.transform = 'scale(1)';
+    containerRef.current.style.transform =
+      "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+    imageRef.current.style.filter = isMobile
+      ? "brightness(1) grayscale(0%)"
+      : "brightness(0.6) grayscale(80%)";
+    imageRef.current.style.transform = "scale(1)";
   }, [isMobile]);
 
   return (
@@ -105,14 +114,17 @@ function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
       ref={containerRef}
       className="relative overflow-hidden cursor-pointer bg-lead"
       style={{
-        transition: 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)',
-        transformStyle: 'preserve-3d'
+        transition: "transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)",
+        transformStyle: "preserve-3d"
       }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       {/* Blueprint Corner Accents */}
-      <div className="absolute inset-6 pointer-events-none transition-opacity duration-500" style={{ zIndex: 10, opacity: 0.6 }}>
+      <div
+        className="absolute inset-6 pointer-events-none transition-opacity duration-500"
+        style={{ zIndex: 10, opacity: 0.6 }}
+      >
         <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-highlight" />
         <div className="absolute top-0 right-0 w-6 h-6 border-t-2 border-r-2 border-highlight" />
         <div className="absolute bottom-0 left-0 w-6 h-6 border-b-2 border-l-2 border-highlight" />
@@ -125,10 +137,12 @@ function PremiumProjectImage({ src, alt }: { src: string; alt: string }) {
         alt={alt}
         className="w-full object-cover"
         style={{
-          aspectRatio: '3/2',
-          transition: 'filter 0.5s ease, transform 0.5s ease',
-          filter: isMobile ? 'brightness(1) grayscale(0%)' : 'brightness(0.6) grayscale(80%)',
-          willChange: 'transform, filter'
+          aspectRatio: "3/2",
+          transition: "filter 0.5s ease, transform 0.5s ease",
+          filter: isMobile
+            ? "brightness(1) grayscale(0%)"
+            : "brightness(0.6) grayscale(80%)",
+          willChange: "transform, filter"
         }}
         loading="lazy"
       />
@@ -145,8 +159,8 @@ function ProjectCard({ project }: { project: Project }) {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const el = entry.target as HTMLElement;
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
             observer.unobserve(el);
           }
         });
@@ -164,8 +178,8 @@ function ProjectCard({ project }: { project: Project }) {
       <span
         className="absolute -top-4 right-0 font-mono font-bold"
         style={{
-          fontSize: '48px',
-          color: 'rgba(212,175,55,0.08)',
+          fontSize: "48px",
+          color: "rgba(212,175,55,0.08)"
         }}
         aria-hidden="true"
       >
@@ -175,9 +189,9 @@ function ProjectCard({ project }: { project: Project }) {
       <h3
         className="font-display font-bold text-pure-white uppercase"
         style={{
-          fontSize: 'clamp(28px, 3.5vw, 42px)',
+          fontSize: "clamp(28px, 3.5vw, 42px)",
           lineHeight: 1.0,
-          letterSpacing: '-0.02em',
+          letterSpacing: "-0.02em"
         }}
       >
         {project.name}
@@ -185,14 +199,14 @@ function ProjectCard({ project }: { project: Project }) {
 
       <span
         className="font-mono uppercase tracking-[0.06em] mt-2"
-        style={{ fontSize: '12px', color: '#00B4D8' }}
+        style={{ fontSize: "12px", color: "#00B4D8" }}
       >
         {project.category}
       </span>
 
       <p
         className="font-display text-ash leading-relaxed mt-4"
-        style={{ fontSize: 'clamp(15px, 1.1vw, 18px)' }}
+        style={{ fontSize: "clamp(15px, 1.1vw, 18px)" }}
       >
         {project.description}
       </p>
@@ -202,7 +216,7 @@ function ProjectCard({ project }: { project: Project }) {
           <span
             key={i}
             className="border border-lead px-2.5 py-1 font-mono text-ash"
-            style={{ fontSize: '10px' }}
+            style={{ fontSize: "10px" }}
           >
             {tag}
           </span>
@@ -215,7 +229,7 @@ function ProjectCard({ project }: { project: Project }) {
     <div
       ref={cardRef}
       className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 transition-all duration-1000"
-      style={{ opacity: 0, transform: 'translateY(60px)' }}
+      style={{ opacity: 0, transform: "translateY(60px)" }}
     >
       {project.reversed ? (
         <>
@@ -241,7 +255,7 @@ export function ProjectsSection() {
     <section
       id="projects"
       className="relative w-full section-padding overflow-hidden"
-      style={{ backgroundColor: '#0A0A0A', zIndex: 2 }}
+      style={{ backgroundColor: "#0A0A0A", zIndex: 2 }}
     >
       {/* Subtle background video */}
       <video
@@ -263,16 +277,18 @@ export function ProjectsSection() {
           <h2
             className="font-display font-medium text-pure-white uppercase"
             style={{
-              fontSize: 'clamp(36px, 5vw, 64px)',
+              fontSize: "clamp(36px, 5vw, 64px)",
               lineHeight: 0.9,
-              letterSpacing: '-0.03em',
+              letterSpacing: "-0.03em"
             }}
           >
-            <StaggeredTextReveal mode="line">SELECTED WORKS</StaggeredTextReveal>
+            <StaggeredTextReveal mode="line">
+              SELECTED WORKS
+            </StaggeredTextReveal>
           </h2>
           <p
             className="font-display text-ash mt-4 leading-relaxed"
-            style={{ fontSize: 'clamp(18px, 1.5vw, 22px)' }}
+            style={{ fontSize: "clamp(18px, 1.5vw, 22px)" }}
           >
             Projects that define my craft.
           </p>
