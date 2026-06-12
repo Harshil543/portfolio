@@ -3,9 +3,9 @@ import { SectionNumber } from '@/components/SectionNumber';
 import { StaggeredTextReveal } from '@/components/StaggeredTextReveal';
 
 const STATS = [
-  { value: '2+', label: 'Years Experience' },
+  { value: '3+', label: 'Years Experience' },
   { value: '10+', label: 'Projects Delivered' },
-  { value: '4', label: 'Domains Worked' },
+  { value: '4+', label: 'Domains Worked' },
 ];
 
 export function AboutSection() {
