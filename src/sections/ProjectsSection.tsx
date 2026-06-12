@@ -14,38 +14,58 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
-  // {
-  //   number: '01',
-  //   name: 'BirdEarly',
-  //   category: 'Real Estate Platform',
-  //   description:
-  //     'A web platform for property discovery, mapping, and real-estate insights using Next.js, NestJS, PostgreSQL, and AWS. Built scalable backend APIs for property management and user workflows.',
-  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-  //   image: '/images/proj-birdearly.jpg',
-  //   reversed: false,
-  // },
-  // {
-  //   number: '02',
-  //   name: 'Clarity',
-  //   category: 'Property Bidding Platform',
-  //   description:
-  //     'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered valuation using Next.js, NestJS, and PostgreSQL. Implemented business logic, notifications, and backend APIs for user engagement.',
-  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-  //   image: '/images/proj-clarity.png',
-  //   reversed: true,
-  // },
-  // {
-  //   number: '03',
-  //   name: 'ScaleRE',
-  //   category: 'Multi-Tenant SaaS Platform',
-  //   description:
-  //     'Developed user management, role-based access control, and business workflow features. Built scalable backend APIs and integrated PostgreSQL database operations.',
-  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-  //   image: '/images/proj-scalere.png',
-  //   reversed: false,
-  // },
   {
     number: '01',
+    name: 'Real Estate Discovery Platform',
+    category: 'Property Marketplace',
+    description:
+      'A web platform for property discovery, interactive mapping, and real-estate insights. Built scalable backend APIs, property management workflows, and user-centric search experiences.',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
+    image: '/images/proj-birdearly.jpg',
+    reversed: false,
+  },
+  {
+    number: '02',
+    name: 'Property Auction & Valuation Platform',
+    category: 'PropTech Solution',
+    description:
+      'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered property valuation. Developed business logic, notifications, and scalable backend services.',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
+    image: '/images/proj-clarity.png',
+    reversed: true,
+  },
+  {
+    number: '03',
+    name: 'Commercial Real Estate SaaS',
+    category: 'Multi-Tenant Platform',
+    description:
+      'Built a multi-tenant SaaS platform with role-based access control, user management, and business workflow automation. Developed scalable APIs and database architecture for enterprise users.',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
+    image: '/images/proj-scalere.png',
+    reversed: false,
+  },
+  {
+    number: '04',
+    name: 'Automotive Marketplace SaaS',
+    category: 'Multi-Tenant Vehicle Platform',
+    description:
+      'Developed a multi-tenant automotive marketplace where dealerships manage inventory through dedicated subdomains while publishing listings to a centralized marketplace. Implemented RBAC, vehicle management, dealer portals, and lead generation workflows.',
+    tags: ['Next.js', 'Node.js', 'PostgreSQL', 'Multi-Tenant'],
+    image: '/images/proj-aurixauto.png',
+    reversed: true,
+  },
+  {
+    number: '01',
+    name: 'AURIX AUTO',
+    category: 'Multi-Tenant Automotive Marketplace & Dealer Management Platform',
+    description:
+      'Built a SaaS-based automotive marketplace where dealerships receive dedicated subdomain portals to manage inventory, staff, and operations. Developed a centralized marketplace aggregating vehicle listings from multiple dealers, featuring role-based access control, vehicle management, dealer profiles, and lead generation workflows.',
+    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Multi-Tenant SaaS'],
+    image: '/images/proj-aurix.png',
+    reversed: false,
+  },
+  {
+    number: '02',
     name: 'Bullit',
     category: 'FinTech Mobile Application',
     description:
