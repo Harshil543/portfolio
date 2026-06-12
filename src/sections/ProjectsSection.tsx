@@ -114,6 +114,21 @@ const PROJECTS: Project[] = [
     ],
     image: '/images/proj-9.jpeg',
     reversed: false,
+  },
+  {
+    number: '10',
+    name: 'Automotive Parts Inventory Platform',
+    category: 'Inventory & Warehouse Management System',
+    description:
+      'Developed an inventory management platform for automotive spare parts featuring barcode management, part number-based search, stock tracking, supplier workflows, and warehouse operations. Built scalable APIs and business workflows to improve inventory accuracy and operational efficiency.',
+    tags: [
+      'Next.js',
+      'Node.js',
+      'PostgreSQL',
+      'Barcode Management'
+    ],
+    image: '/images/proj-10.jpeg',
+    reversed: true,
   }
 ];
 
