@@ -14,36 +14,36 @@ interface Project {
 }
 
 const PROJECTS: Project[] = [
-  {
-    number: '01',
-    name: 'BirdEarly',
-    category: 'Real Estate Platform',
-    description:
-      'A web platform for property discovery, mapping, and real-estate insights using Next.js, NestJS, PostgreSQL, and AWS. Built scalable backend APIs for property management and user workflows.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-birdearly.jpg',
-    reversed: false,
-  },
-  {
-    number: '02',
-    name: 'Clarity',
-    category: 'Property Bidding Platform',
-    description:
-      'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered valuation using Next.js, NestJS, and PostgreSQL. Implemented business logic, notifications, and backend APIs for user engagement.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
-    image: '/images/proj-clarity.png',
-    reversed: true,
-  },
-  {
-    number: '03',
-    name: 'ScaleRE',
-    category: 'Multi-Tenant SaaS Platform',
-    description:
-      'Developed user management, role-based access control, and business workflow features. Built scalable backend APIs and integrated PostgreSQL database operations.',
-    tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
-    image: '/images/proj-scalere.png',
-    reversed: false,
-  },
+  // {
+  //   number: '01',
+  //   name: 'BirdEarly',
+  //   category: 'Real Estate Platform',
+  //   description:
+  //     'A web platform for property discovery, mapping, and real-estate insights using Next.js, NestJS, PostgreSQL, and AWS. Built scalable backend APIs for property management and user workflows.',
+  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
+  //   image: '/images/proj-birdearly.jpg',
+  //   reversed: false,
+  // },
+  // {
+  //   number: '02',
+  //   name: 'Clarity',
+  //   category: 'Property Bidding Platform',
+  //   description:
+  //     'A bidding-focused real-estate platform featuring transparent deal tracking, auction workflows, and AI-powered valuation using Next.js, NestJS, and PostgreSQL. Implemented business logic, notifications, and backend APIs for user engagement.',
+  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'Notifications'],
+  //   image: '/images/proj-clarity.png',
+  //   reversed: true,
+  // },
+  // {
+  //   number: '03',
+  //   name: 'ScaleRE',
+  //   category: 'Multi-Tenant SaaS Platform',
+  //   description:
+  //     'Developed user management, role-based access control, and business workflow features. Built scalable backend APIs and integrated PostgreSQL database operations.',
+  //   tags: ['Next.js', 'NestJS', 'PostgreSQL', 'AWS'],
+  //   image: '/images/proj-scalere.png',
+  //   reversed: false,
+  // },
   {
     number: '04',
     name: 'Bullit',
